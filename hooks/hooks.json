@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -nc --arg t \"$(date '+%A, %Y-%m-%d %I:%M %p %Z')\" --arg iso \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\" --arg short \"$(date '+%I:%M %p %Z')\" '{hookSpecificOutput:{hookEventName:\"UserPromptSubmit\",additionalContext:(\"Now-Aware: current local time is \" + $t + \" (UTC \" + $iso + \"). Use this for any time-of-day language (morning/afternoon/evening/tonight/tomorrow). Never guess time from prior context — it goes stale. If the user references a relative time, anchor it to this timestamp.\\n\\nMessage stamping: BEGIN every response with the marker `[\" + $short + \"]` on its own first line so the user can see when each message landed. If you stall or a long task crashes, the last visible message will still show its timestamp.\")}}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

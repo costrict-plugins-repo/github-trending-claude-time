@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-time-marketplace",
+  "description": "Single-plugin marketplace for claude-time.",
+  "owner": {
+    "name": "nexusbuildsai"
+  },
+  "plugins": [
+    {
+      "name": "claude-time",
+      "source": "./",
+      "description": "Live time + timezone injected into every prompt. Stops Claude from saying 'tonight' in the morning. Stamps every response with [HH:MM AM/PM TZ].",
+      "version": "0.1.0",
+      "author": {
+        "name": "nexusbuildsai"
+      },
+      "homepage": "https://github.com/nexusbuildsai/claude-time",
+      "repository": "https://github.com/nexusbuildsai/claude-time",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["time", "timezone", "context", "hook", "claude-code"]
+    }
+  ]
+}

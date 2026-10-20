@@ -1,0 +1,13 @@
+{
+  "name": "claude-time",
+  "version": "0.1.0",
+  "description": "Injects live local time + timezone into every prompt so Claude never says 'tonight' in the morning. Stamps every response with [HH:MM AM/PM TZ]. Zero config, zero dependencies beyond jq.",
+  "author": {
+    "name": "nexusbuildsai",
+    "url": "https://github.com/nexusbuildsai"
+  },
+  "homepage": "https://github.com/nexusbuildsai/claude-time",
+  "license": "MIT",
+  "keywords": ["time", "timezone", "context", "hook", "productivity", "claude-code"],
+  "hooks": "./hooks/hooks.json"
+}
